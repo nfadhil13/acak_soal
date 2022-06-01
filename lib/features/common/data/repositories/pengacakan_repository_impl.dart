@@ -37,4 +37,15 @@ class PengacakanRepositoryImpl extends BaseRepository
                 dataSoal: dataSoal,
                 layoutRuangan: layoutRuangan));
       });
+
+  @override
+  Future<Resource<bool>> sentEmail(
+          {required String email,
+          required String soalPath,
+          required Uint8List pdf}) =>
+      networkOnlyCall(networkCall: () async {
+        await _pengacakanNetworkDataSource.sendResultEmail(
+            email: email, soalPath: soalPath, pdf: pdf);
+        return Resource.success(data: true);
+      });
 }

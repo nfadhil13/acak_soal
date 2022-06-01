@@ -11,6 +11,7 @@ import 'package:acak_soal/features/common/domain/model/data_pengacakan.dart';
 import 'package:acak_soal/features/common/domain/model/data_ruangan.dart';
 import 'package:acak_soal/features/common/domain/model/data_ujian_final.dart';
 import 'package:acak_soal/features/common/domain/model/layout_ruangan.dart';
+import 'package:acak_soal/features/form/presentation/get_result_to_email/get_result_to_email_screen.dart';
 import 'package:arrow_path/arrow_path.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ part 'widgets/data_ujian.dart';
 part 'widgets/data_layout_ruangan.dart';
 part 'widgets/denah_ruangan.dart';
 part 'widgets/download_json.dart';
+part 'widgets/download_hasil.dart';
 
 class ResultScreen extends StatelessWidget {
   static const routeName = "/result";
@@ -87,6 +89,10 @@ class _ResultScreenValid extends StatelessWidget {
                 const SizedBox(height: 50),
                 _DownloadJSON(
                     downloadURL: dataUjianFinal.dataPengacakan.paketURL),
+                const SizedBox(height: 50),
+                _DownloadHasil(
+                  dataUjianFinal: dataUjianFinal,
+                ),
                 const SizedBox(height: 50),
                 Text("Denah Ruangan",
                     style: context.textTheme.bodyMedium

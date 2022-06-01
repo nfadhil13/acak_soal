@@ -1,12 +1,15 @@
+import 'package:acak_soal/core/util/pdf_creator.dart';
 import 'package:acak_soal/features/common/data/datasource/pengacakan_network_data_source.dart';
 import 'package:acak_soal/features/common/data/repositories/pengacakan_repository_impl.dart';
 import 'package:acak_soal/features/common/domain/repositories/pengacakan_repository.dart';
 import 'package:acak_soal/features/form/presentation/choose_,layout/cubit/choose_layout_cubit.dart';
 import 'package:acak_soal/features/form/presentation/form/cubit/form_cubit.dart';
+import 'package:acak_soal/features/form/presentation/get_result_to_email/cubit/get_result_to_email_cubit.dart';
 import 'package:acak_soal/features/generate_template/data/datasource/generate_template_network_datasource.dart';
 import 'package:acak_soal/features/generate_template/presentation/cubit/generate_template_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:screenshot/screenshot.dart';
 
 import '../../features/generate_template/data/respositories/generate_template_repository_impl.dart';
 import '../../features/generate_template/domain/repositories/generate_template_repository.dart';
@@ -26,6 +29,7 @@ void _injectBloc() {
   getIt.registerFactory(() => FormCubit(getIt()));
   getIt.registerFactory(() => ChooselayoutcubitCubit(getIt()));
   getIt.registerFactory(() => GenerateTemplateCubit(getIt()));
+  getIt.registerFactory(() => GetResultToEmailCubit(getIt(), getIt()));
 }
 
 void _injectRepository() {
@@ -44,4 +48,6 @@ void _injectDataSource() {
 
 void _injectCore() {
   getIt.registerFactory(() => Dio());
+  getIt.registerFactory(() => PDFCreator(getIt()));
+  getIt.registerFactory(() => ScreenshotController());
 }

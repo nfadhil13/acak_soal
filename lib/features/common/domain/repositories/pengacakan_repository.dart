@@ -11,5 +11,12 @@ abstract class PengacakanRepository {
       {required DataInputUjian dataInputUjian, required Uint8List dataSoal});
 
   Future<Resource<DataUjianFinal>> startAcak(
-      {required DataInputUjian dataInputUjian, required Uint8List dataSoal, required LayoutRuangan layoutRuangan});
+      {required DataInputUjian dataInputUjian,
+      required Uint8List dataSoal,
+      required LayoutRuangan layoutRuangan});
+
+  Future<Resource<bool>> sentEmail(
+      {required String email,
+      required String soalPath,
+      required Uint8List pdf});
 }

@@ -18,6 +18,7 @@ class DataUjianFinalModel extends DataUjianFinal {
           required List<dynamic> jsonKetetanggan,
           required String paketURL,
           required int jumlahPaket,
+          required String filePath,
           required double persentaseKeunikan}) =>
       DataUjianFinalModel(
           dataRuangan,
@@ -26,5 +27,5 @@ class DataUjianFinalModel extends DataUjianFinal {
               .map((e) => DataKetetanggaanModel.fromJson((e as List)[1]))
               .toList(),
           jumlahPeserta,
-          DataPengacakan(jumlahPaket, paketURL, persentaseKeunikan));
+          DataPengacakan(jumlahPaket, paketURL, persentaseKeunikan, filePath));
 }

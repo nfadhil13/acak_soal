@@ -31,7 +31,18 @@ class InputRuangan {
       "horizontalMeja": panjangMeja,
       "vertikalMeja": lebarMeja,
       "jumlahPeserta": jumlahPeserta,
-      "listSoal": MultipartFile.fromBytes(file, filename: "soal.json", contentType: MediaType("application", "json"))
+      "listSoal": MultipartFile.fromBytes(file,
+          filename: "soal.json", contentType: MediaType("application", "json"))
+    };
+  }
+
+  Map<String, dynamic> toMapWithoutFile() {
+    return {
+      "horizontalRuangan": panjangHorizontal,
+      "vertikalRuangan": panjangVertical,
+      "horizontalMeja": panjangMeja,
+      "vertikalMeja": lebarMeja,
+      "jumlahPeserta": jumlahPeserta,
     };
   }
 }

@@ -1,0 +1,1247 @@
+{
+    "message": "Berhasil melakukan simulasi Fisher Yates + Graph Coloring",
+    "data": {
+        "ruangan": {
+            "horizontalRuangan": 500,
+            "vertikalRuangan": 1000,
+            "horizontalMeja": 60,
+            "vertikalMeja": 50,
+            "jumlahPeserta": 10
+        },
+        "processResult": {
+            "hasilGraph": {
+                "chromaticNumber": 4,
+                "distributionResult": {
+                    "0": 3,
+                    "1": 2,
+                    "2": 3,
+                    "3": 2,
+                    "4": 3,
+                    "5": 2,
+                    "6": 1,
+                    "7": 0,
+                    "8": 1,
+                    "9": 0,
+                    "10": 1,
+                    "11": 0,
+                    "12": 3,
+                    "13": 2,
+                    "14": 3,
+                    "15": 2,
+                    "16": 3,
+                    "17": 2
+                },
+                "graph": [
+                    [
+                        0,
+                        {
+                            "data": 0,
+                            "adjacents": [
+                                1
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        1,
+                        {
+                            "data": 1,
+                            "adjacents": [
+                                0,
+                                2
+                            ],
+                            "paket": 2
+                        }
+                    ],
+                    [
+                        2,
+                        {
+                            "data": 2,
+                            "adjacents": [
+                                1,
+                                3
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        3,
+                        {
+                            "data": 3,
+                            "adjacents": [
+                                2,
+                                4
+                            ],
+                            "paket": 2
+                        }
+                    ],
+                    [
+                        4,
+                        {
+                            "data": 4,
+                            "adjacents": [
+                                3,
+                                5
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        5,
+                        {
+                            "data": 5,
+                            "adjacents": [
+                                4
+                            ],
+                            "paket": 2
+                        }
+                    ],
+                    [
+                        6,
+                        {
+                            "data": 6,
+                            "adjacents": [
+                                0,
+                                1,
+                                7
+                            ],
+                            "paket": 1
+                        }
+                    ],
+                    [
+                        7,
+                        {
+                            "data": 7,
+                            "adjacents": [
+                                0,
+                                1,
+                                2,
+                                6,
+                                8
+                            ],
+                            "paket": 0
+                        }
+                    ],
+                    [
+                        8,
+                        {
+                            "data": 8,
+                            "adjacents": [
+                                1,
+                                2,
+                                3,
+                                7,
+                                9
+                            ],
+                            "paket": 1
+                        }
+                    ],
+                    [
+                        9,
+                        {
+                            "data": 9,
+                            "adjacents": [
+                                2,
+                                3,
+                                4,
+                                8,
+                                10
+                            ],
+                            "paket": 0
+                        }
+                    ],
+                    [
+                        10,
+                        {
+                            "data": 10,
+                            "adjacents": [
+                                3,
+                                4,
+                                5,
+                                9,
+                                11
+                            ],
+                            "paket": 1
+                        }
+                    ],
+                    [
+                        11,
+                        {
+                            "data": 11,
+                            "adjacents": [
+                                4,
+                                5,
+                                10
+                            ],
+                            "paket": 0
+                        }
+                    ],
+                    [
+                        12,
+                        {
+                            "data": 12,
+                            "adjacents": [
+                                6,
+                                7,
+                                13
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        13,
+                        {
+                            "data": 13,
+                            "adjacents": [
+                                6,
+                                7,
+                                8,
+                                12,
+                                14
+                            ],
+                            "paket": 2
+                        }
+                    ],
+                    [
+                        14,
+                        {
+                            "data": 14,
+                            "adjacents": [
+                                7,
+                                8,
+                                9,
+                                13,
+                                15
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        15,
+                        {
+                            "data": 15,
+                            "adjacents": [
+                                8,
+                                9,
+                                10,
+                                14,
+                                16
+                            ],
+                            "paket": 2
+                        }
+                    ],
+                    [
+                        16,
+                        {
+                            "data": 16,
+                            "adjacents": [
+                                9,
+                                10,
+                                11,
+                                15,
+                                17
+                            ],
+                            "paket": 3
+                        }
+                    ],
+                    [
+                        17,
+                        {
+                            "data": 17,
+                            "adjacents": [
+                                10,
+                                11,
+                                16
+                            ],
+                            "paket": 2
+                        }
+                    ]
+                ]
+            },
+            "hasilAcakan": {
+                "persentaseKeunikan": 65,
+                "listPaketNomor": [
+                    [
+                        2,
+                        17,
+                        8,
+                        12,
+                        20,
+                        19,
+                        10,
+                        15,
+                        4,
+                        14,
+                        13,
+                        7,
+                        6,
+                        3,
+                        16,
+                        18,
+                        5,
+                        1,
+                        9,
+                        11
+                    ],
+                    [
+                        6,
+                        9,
+                        8,
+                        2,
+                        17,
+                        20,
+                        16,
+                        11,
+                        1,
+                        14,
+                        15,
+                        4,
+                        5,
+                        3,
+                        19,
+                        13,
+                        12,
+                        7,
+                        18,
+                        10
+                    ],
+                    [
+                        5,
+                        19,
+                        12,
+                        20,
+                        6,
+                        9,
+                        16,
+                        3,
+                        13,
+                        2,
+                        17,
+                        15,
+                        8,
+                        18,
+                        11,
+                        1,
+                        14,
+                        4,
+                        7,
+                        10
+                    ],
+                    [
+                        19,
+                        5,
+                        7,
+                        16,
+                        1,
+                        4,
+                        9,
+                        18,
+                        12,
+                        11,
+                        20,
+                        15,
+                        17,
+                        10,
+                        8,
+                        3,
+                        14,
+                        2,
+                        13,
+                        6
+                    ]
+                ],
+                "listPaket": [
+                    [
+                        {
+                            "id": 2,
+                            "question": "Which statement best explains the periods of the Gupta Empire of India, the Golden Age of Greece, and the Renaissance in Italy?",
+                            "option": [
+                                "the winning of a war often inspires scientific and artistic achievement",
+                                "a combination of wealth and a time of relative peace often leads to cultural achievement",
+                                "a dictatorship usually encourages cultural growth and development",
+                                "periods of censorship are needed for a nation to achieve cultural and scientific greatness"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 17,
+                            "question": "The French Revolution, the Bolshevik Revolution in Russia, and the Communist Revolution in China were similar in that all three",
+                            "option": [
+                                "brought about few political changes",
+                                "were influenced by the peasants  desire for more land",
+                                "were inspired by Marxism",
+                                "were supported primarily by the nobility"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 8,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 12,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 20,
+                            "question": "The French Revolution of 1789 and the Cuban Revolution of 1959 were similar in that both were caused primarily by the",
+                            "option": [
+                                "desire of the people to be free from foreign rule",
+                                "pressure of religious leaders for government reform",
+                                "failure of the government to meet the needs of the people",
+                                "ambition of the upper class to attain wealth and property"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 19,
+                            "question": "In China, the building of the Great Wall, the use of the tribute system, and the government s support of the Boxer Rebellion are examples of attempts by different dynasties to limit",
+                            "option": [
+                                "foreign influence",
+                                "nationalism",
+                                "communist expansion",
+                                "industrialization"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 10,
+                            "question": "One similarity between the decline of the Roman Empire and the fall of the Manchu Dynasty was that both initially led to",
+                            "option": [
+                                "improved economic conditions",
+                                "democratically elected governments",
+                                "political chaos and decentralization of government",
+                                "major accomplishments in art, science, and technology"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 15,
+                            "question": "Which was characteristic of France under Napoleon s rule and Germany under Hitler s rule?",
+                            "option": [
+                                "democratic ideas and diversity were encouraged",
+                                "authoritarian control and a strong sense of nationalism prevailed",
+                                "peaceful relations with neighboring countries wee fostered",
+                                "artistic and literary freedom flourished"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 4,
+                            "question": "Which idea did Napoleon Bonaparte, Sun Yat-Sen, and Simone Bolivar have in common?",
+                            "option": [
+                                "divine right",
+                                "nationalism",
+                                "totalitarianism",
+                                "nonviolence"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 14,
+                            "question": "The Tamils in Sri Lanka, the Sikhs in India, and the Zulus in South Africa have all attempted to",
+                            "option": [
+                                "establish colonies in Asia",
+                                "practice passive resistance",
+                                "achieve political separatism",
+                                "encourage mercantilism"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 13,
+                            "question": "Changes in Russia under Peter the Great were most similar to changes that occurred in",
+                            "option": [
+                                "China before the Opium War",
+                                "Japan during the Meiji Restoration",
+                                "Iran after the fall of Shah Pahlevi",
+                                "France during the feudal period"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 7,
+                            "question": "During the Middle Ages, Europeans did not eat potatoes or corn because these vegetables",
+                            "option": [
+                                "were forbidden by the Catholic Church for religious reasons",
+                                "had not yet been introduced to Europe from the New World",
+                                "were believed to be poisonous",
+                                "were too expensive to import from China"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 6,
+                            "question": "Until the 1500 s, China and Japan were similar in that both",
+                            "option": [
+                                "were invaded by the Mongols",
+                                "welcomed Christian Missionaries",
+                                "had little contact with Western European nations",
+                                "were developing democratic traditions"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 3,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 16,
+                            "question": "A study of the French Revolution and the Russian Revolution of 1917 would lead to the conclusion that",
+                            "option": [
+                                "revolutions only occur when a majority of citizens become directly involved",
+                                "university students are most often responsible for starting revolutions",
+                                "control of revolutions often shifts from moderates to radicals",
+                                "revolutions seldom result in long-term changes"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 18,
+                            "question": "The ancient Greek city-state of Sparta and the Soviet Union under Stalin were similar in that both societies",
+                            "option": [
+                                "were primarily concerned with the health of their people",
+                                "were powerful military states",
+                                "granted universal suffrage to their people",
+                                "placed great emphasis on literature and the arts"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 5,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 1,
+                            "question": "In the Ancient Kingdom of Mali and in the Roman Republic, an important feature of life was the development of",
+                            "option": [
+                                "codified laws",
+                                "social and political equality",
+                                "the Islamic religion",
+                                "agricultural communes"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 9,
+                            "question": "The societies of traditional China, Feudal Japan, and Czarist Russia were all characterized by",
+                            "option": [
+                                "a rigid class structure",
+                                "much interaction with other cultures",
+                                "great economic change",
+                                "rapidly changing social values"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 11,
+                            "question": "The Japanese feudal system and the Hindu caste system are similar in that both systems",
+                            "option": [
+                                "promoted social mobility",
+                                "developed a rigid class structure",
+                                "encouraged the people to take part in government",
+                                "resulted in economic opportunities for the lower classes"
+                            ],
+                            "answer": 1
+                        }
+                    ],
+                    [
+                        {
+                            "id": 6,
+                            "question": "Until the 1500 s, China and Japan were similar in that both",
+                            "option": [
+                                "were invaded by the Mongols",
+                                "welcomed Christian Missionaries",
+                                "had little contact with Western European nations",
+                                "were developing democratic traditions"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 9,
+                            "question": "The societies of traditional China, Feudal Japan, and Czarist Russia were all characterized by",
+                            "option": [
+                                "a rigid class structure",
+                                "much interaction with other cultures",
+                                "great economic change",
+                                "rapidly changing social values"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 8,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 2,
+                            "question": "Which statement best explains the periods of the Gupta Empire of India, the Golden Age of Greece, and the Renaissance in Italy?",
+                            "option": [
+                                "the winning of a war often inspires scientific and artistic achievement",
+                                "a combination of wealth and a time of relative peace often leads to cultural achievement",
+                                "a dictatorship usually encourages cultural growth and development",
+                                "periods of censorship are needed for a nation to achieve cultural and scientific greatness"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 17,
+                            "question": "The French Revolution, the Bolshevik Revolution in Russia, and the Communist Revolution in China were similar in that all three",
+                            "option": [
+                                "brought about few political changes",
+                                "were influenced by the peasants  desire for more land",
+                                "were inspired by Marxism",
+                                "were supported primarily by the nobility"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 20,
+                            "question": "The French Revolution of 1789 and the Cuban Revolution of 1959 were similar in that both were caused primarily by the",
+                            "option": [
+                                "desire of the people to be free from foreign rule",
+                                "pressure of religious leaders for government reform",
+                                "failure of the government to meet the needs of the people",
+                                "ambition of the upper class to attain wealth and property"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 16,
+                            "question": "A study of the French Revolution and the Russian Revolution of 1917 would lead to the conclusion that",
+                            "option": [
+                                "revolutions only occur when a majority of citizens become directly involved",
+                                "university students are most often responsible for starting revolutions",
+                                "control of revolutions often shifts from moderates to radicals",
+                                "revolutions seldom result in long-term changes"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 11,
+                            "question": "The Japanese feudal system and the Hindu caste system are similar in that both systems",
+                            "option": [
+                                "promoted social mobility",
+                                "developed a rigid class structure",
+                                "encouraged the people to take part in government",
+                                "resulted in economic opportunities for the lower classes"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 1,
+                            "question": "In the Ancient Kingdom of Mali and in the Roman Republic, an important feature of life was the development of",
+                            "option": [
+                                "codified laws",
+                                "social and political equality",
+                                "the Islamic religion",
+                                "agricultural communes"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 14,
+                            "question": "The Tamils in Sri Lanka, the Sikhs in India, and the Zulus in South Africa have all attempted to",
+                            "option": [
+                                "establish colonies in Asia",
+                                "practice passive resistance",
+                                "achieve political separatism",
+                                "encourage mercantilism"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 15,
+                            "question": "Which was characteristic of France under Napoleon s rule and Germany under Hitler s rule?",
+                            "option": [
+                                "democratic ideas and diversity were encouraged",
+                                "authoritarian control and a strong sense of nationalism prevailed",
+                                "peaceful relations with neighboring countries wee fostered",
+                                "artistic and literary freedom flourished"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 4,
+                            "question": "Which idea did Napoleon Bonaparte, Sun Yat-Sen, and Simone Bolivar have in common?",
+                            "option": [
+                                "divine right",
+                                "nationalism",
+                                "totalitarianism",
+                                "nonviolence"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 5,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 3,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 19,
+                            "question": "In China, the building of the Great Wall, the use of the tribute system, and the government s support of the Boxer Rebellion are examples of attempts by different dynasties to limit",
+                            "option": [
+                                "foreign influence",
+                                "nationalism",
+                                "communist expansion",
+                                "industrialization"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 13,
+                            "question": "Changes in Russia under Peter the Great were most similar to changes that occurred in",
+                            "option": [
+                                "China before the Opium War",
+                                "Japan during the Meiji Restoration",
+                                "Iran after the fall of Shah Pahlevi",
+                                "France during the feudal period"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 12,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 7,
+                            "question": "During the Middle Ages, Europeans did not eat potatoes or corn because these vegetables",
+                            "option": [
+                                "were forbidden by the Catholic Church for religious reasons",
+                                "had not yet been introduced to Europe from the New World",
+                                "were believed to be poisonous",
+                                "were too expensive to import from China"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 18,
+                            "question": "The ancient Greek city-state of Sparta and the Soviet Union under Stalin were similar in that both societies",
+                            "option": [
+                                "were primarily concerned with the health of their people",
+                                "were powerful military states",
+                                "granted universal suffrage to their people",
+                                "placed great emphasis on literature and the arts"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 10,
+                            "question": "One similarity between the decline of the Roman Empire and the fall of the Manchu Dynasty was that both initially led to",
+                            "option": [
+                                "improved economic conditions",
+                                "democratically elected governments",
+                                "political chaos and decentralization of government",
+                                "major accomplishments in art, science, and technology"
+                            ],
+                            "answer": 2
+                        }
+                    ],
+                    [
+                        {
+                            "id": 5,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 19,
+                            "question": "In China, the building of the Great Wall, the use of the tribute system, and the government s support of the Boxer Rebellion are examples of attempts by different dynasties to limit",
+                            "option": [
+                                "foreign influence",
+                                "nationalism",
+                                "communist expansion",
+                                "industrialization"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 12,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 20,
+                            "question": "The French Revolution of 1789 and the Cuban Revolution of 1959 were similar in that both were caused primarily by the",
+                            "option": [
+                                "desire of the people to be free from foreign rule",
+                                "pressure of religious leaders for government reform",
+                                "failure of the government to meet the needs of the people",
+                                "ambition of the upper class to attain wealth and property"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 6,
+                            "question": "Until the 1500 s, China and Japan were similar in that both",
+                            "option": [
+                                "were invaded by the Mongols",
+                                "welcomed Christian Missionaries",
+                                "had little contact with Western European nations",
+                                "were developing democratic traditions"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 9,
+                            "question": "The societies of traditional China, Feudal Japan, and Czarist Russia were all characterized by",
+                            "option": [
+                                "a rigid class structure",
+                                "much interaction with other cultures",
+                                "great economic change",
+                                "rapidly changing social values"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 16,
+                            "question": "A study of the French Revolution and the Russian Revolution of 1917 would lead to the conclusion that",
+                            "option": [
+                                "revolutions only occur when a majority of citizens become directly involved",
+                                "university students are most often responsible for starting revolutions",
+                                "control of revolutions often shifts from moderates to radicals",
+                                "revolutions seldom result in long-term changes"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 3,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 13,
+                            "question": "Changes in Russia under Peter the Great were most similar to changes that occurred in",
+                            "option": [
+                                "China before the Opium War",
+                                "Japan during the Meiji Restoration",
+                                "Iran after the fall of Shah Pahlevi",
+                                "France during the feudal period"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 2,
+                            "question": "Which statement best explains the periods of the Gupta Empire of India, the Golden Age of Greece, and the Renaissance in Italy?",
+                            "option": [
+                                "the winning of a war often inspires scientific and artistic achievement",
+                                "a combination of wealth and a time of relative peace often leads to cultural achievement",
+                                "a dictatorship usually encourages cultural growth and development",
+                                "periods of censorship are needed for a nation to achieve cultural and scientific greatness"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 17,
+                            "question": "The French Revolution, the Bolshevik Revolution in Russia, and the Communist Revolution in China were similar in that all three",
+                            "option": [
+                                "brought about few political changes",
+                                "were influenced by the peasants  desire for more land",
+                                "were inspired by Marxism",
+                                "were supported primarily by the nobility"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 15,
+                            "question": "Which was characteristic of France under Napoleon s rule and Germany under Hitler s rule?",
+                            "option": [
+                                "democratic ideas and diversity were encouraged",
+                                "authoritarian control and a strong sense of nationalism prevailed",
+                                "peaceful relations with neighboring countries wee fostered",
+                                "artistic and literary freedom flourished"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 8,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 18,
+                            "question": "The ancient Greek city-state of Sparta and the Soviet Union under Stalin were similar in that both societies",
+                            "option": [
+                                "were primarily concerned with the health of their people",
+                                "were powerful military states",
+                                "granted universal suffrage to their people",
+                                "placed great emphasis on literature and the arts"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 11,
+                            "question": "The Japanese feudal system and the Hindu caste system are similar in that both systems",
+                            "option": [
+                                "promoted social mobility",
+                                "developed a rigid class structure",
+                                "encouraged the people to take part in government",
+                                "resulted in economic opportunities for the lower classes"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 1,
+                            "question": "In the Ancient Kingdom of Mali and in the Roman Republic, an important feature of life was the development of",
+                            "option": [
+                                "codified laws",
+                                "social and political equality",
+                                "the Islamic religion",
+                                "agricultural communes"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 14,
+                            "question": "The Tamils in Sri Lanka, the Sikhs in India, and the Zulus in South Africa have all attempted to",
+                            "option": [
+                                "establish colonies in Asia",
+                                "practice passive resistance",
+                                "achieve political separatism",
+                                "encourage mercantilism"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 4,
+                            "question": "Which idea did Napoleon Bonaparte, Sun Yat-Sen, and Simone Bolivar have in common?",
+                            "option": [
+                                "divine right",
+                                "nationalism",
+                                "totalitarianism",
+                                "nonviolence"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 7,
+                            "question": "During the Middle Ages, Europeans did not eat potatoes or corn because these vegetables",
+                            "option": [
+                                "were forbidden by the Catholic Church for religious reasons",
+                                "had not yet been introduced to Europe from the New World",
+                                "were believed to be poisonous",
+                                "were too expensive to import from China"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 10,
+                            "question": "One similarity between the decline of the Roman Empire and the fall of the Manchu Dynasty was that both initially led to",
+                            "option": [
+                                "improved economic conditions",
+                                "democratically elected governments",
+                                "political chaos and decentralization of government",
+                                "major accomplishments in art, science, and technology"
+                            ],
+                            "answer": 2
+                        }
+                    ],
+                    [
+                        {
+                            "id": 19,
+                            "question": "In China, the building of the Great Wall, the use of the tribute system, and the government s support of the Boxer Rebellion are examples of attempts by different dynasties to limit",
+                            "option": [
+                                "foreign influence",
+                                "nationalism",
+                                "communist expansion",
+                                "industrialization"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 5,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 7,
+                            "question": "During the Middle Ages, Europeans did not eat potatoes or corn because these vegetables",
+                            "option": [
+                                "were forbidden by the Catholic Church for religious reasons",
+                                "had not yet been introduced to Europe from the New World",
+                                "were believed to be poisonous",
+                                "were too expensive to import from China"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 16,
+                            "question": "A study of the French Revolution and the Russian Revolution of 1917 would lead to the conclusion that",
+                            "option": [
+                                "revolutions only occur when a majority of citizens become directly involved",
+                                "university students are most often responsible for starting revolutions",
+                                "control of revolutions often shifts from moderates to radicals",
+                                "revolutions seldom result in long-term changes"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 1,
+                            "question": "In the Ancient Kingdom of Mali and in the Roman Republic, an important feature of life was the development of",
+                            "option": [
+                                "codified laws",
+                                "social and political equality",
+                                "the Islamic religion",
+                                "agricultural communes"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 4,
+                            "question": "Which idea did Napoleon Bonaparte, Sun Yat-Sen, and Simone Bolivar have in common?",
+                            "option": [
+                                "divine right",
+                                "nationalism",
+                                "totalitarianism",
+                                "nonviolence"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 9,
+                            "question": "The societies of traditional China, Feudal Japan, and Czarist Russia were all characterized by",
+                            "option": [
+                                "a rigid class structure",
+                                "much interaction with other cultures",
+                                "great economic change",
+                                "rapidly changing social values"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 18,
+                            "question": "The ancient Greek city-state of Sparta and the Soviet Union under Stalin were similar in that both societies",
+                            "option": [
+                                "were primarily concerned with the health of their people",
+                                "were powerful military states",
+                                "granted universal suffrage to their people",
+                                "placed great emphasis on literature and the arts"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 12,
+                            "question": "Eighteenth-century Russia and nineteenth-century Japan were similar in that both countries",
+                            "option": [
+                                "began the process of modernization after a long period of isolation",
+                                "developed democratic governments after years under absolute monarchies",
+                                "refused to accept western technological ideas",
+                                "adopted socialist economic systems after capitalism had failed"
+                            ],
+                            "answer": 0
+                        },
+                        {
+                            "id": 11,
+                            "question": "The Japanese feudal system and the Hindu caste system are similar in that both systems",
+                            "option": [
+                                "promoted social mobility",
+                                "developed a rigid class structure",
+                                "encouraged the people to take part in government",
+                                "resulted in economic opportunities for the lower classes"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 20,
+                            "question": "The French Revolution of 1789 and the Cuban Revolution of 1959 were similar in that both were caused primarily by the",
+                            "option": [
+                                "desire of the people to be free from foreign rule",
+                                "pressure of religious leaders for government reform",
+                                "failure of the government to meet the needs of the people",
+                                "ambition of the upper class to attain wealth and property"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 15,
+                            "question": "Which was characteristic of France under Napoleon s rule and Germany under Hitler s rule?",
+                            "option": [
+                                "democratic ideas and diversity were encouraged",
+                                "authoritarian control and a strong sense of nationalism prevailed",
+                                "peaceful relations with neighboring countries wee fostered",
+                                "artistic and literary freedom flourished"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 17,
+                            "question": "The French Revolution, the Bolshevik Revolution in Russia, and the Communist Revolution in China were similar in that all three",
+                            "option": [
+                                "brought about few political changes",
+                                "were influenced by the peasants  desire for more land",
+                                "were inspired by Marxism",
+                                "were supported primarily by the nobility"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 10,
+                            "question": "One similarity between the decline of the Roman Empire and the fall of the Manchu Dynasty was that both initially led to",
+                            "option": [
+                                "improved economic conditions",
+                                "democratically elected governments",
+                                "political chaos and decentralization of government",
+                                "major accomplishments in art, science, and technology"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 8,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 3,
+                            "question": "One way in which Medieval European society, Latin American colonial society, and society in Imperial China were similar is that each",
+                            "option": [
+                                "placed great value on public education",
+                                "experienced a surplus of skilled labor",
+                                "was organized according to a rigid class structure",
+                                "de-emphasized the role of religion"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 14,
+                            "question": "The Tamils in Sri Lanka, the Sikhs in India, and the Zulus in South Africa have all attempted to",
+                            "option": [
+                                "establish colonies in Asia",
+                                "practice passive resistance",
+                                "achieve political separatism",
+                                "encourage mercantilism"
+                            ],
+                            "answer": 2
+                        },
+                        {
+                            "id": 2,
+                            "question": "Which statement best explains the periods of the Gupta Empire of India, the Golden Age of Greece, and the Renaissance in Italy?",
+                            "option": [
+                                "the winning of a war often inspires scientific and artistic achievement",
+                                "a combination of wealth and a time of relative peace often leads to cultural achievement",
+                                "a dictatorship usually encourages cultural growth and development",
+                                "periods of censorship are needed for a nation to achieve cultural and scientific greatness"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 13,
+                            "question": "Changes in Russia under Peter the Great were most similar to changes that occurred in",
+                            "option": [
+                                "China before the Opium War",
+                                "Japan during the Meiji Restoration",
+                                "Iran after the fall of Shah Pahlevi",
+                                "France during the feudal period"
+                            ],
+                            "answer": 1
+                        },
+                        {
+                            "id": 6,
+                            "question": "Until the 1500 s, China and Japan were similar in that both",
+                            "option": [
+                                "were invaded by the Mongols",
+                                "welcomed Christian Missionaries",
+                                "had little contact with Western European nations",
+                                "were developing democratic traditions"
+                            ],
+                            "answer": 2
+                        }
+                    ]
+                ]
+            }
+        },
+        "jsonUrl": "http://ec2-52-221-254-172.ap-southeast-1.compute.amazonaws.com:3000/soal/1653728902534-HasilPengacakanSoal.json"
+    }
+}

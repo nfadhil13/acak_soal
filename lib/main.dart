@@ -5,12 +5,18 @@ import 'package:acak_soal/features/form/presentation/choose_,layout/choose_layou
 import 'package:acak_soal/features/form/presentation/form/form_screen.dart';
 import 'package:acak_soal/features/form/presentation/result/result_screen.dart';
 import 'package:acak_soal/features/landing_page/presentation/landing_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-void main() async{
+import 'firebase_options.dart';
+
+void main() async {
   await InjectionContainer.init();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -33,14 +39,14 @@ class MyApp extends StatelessWidget {
             ResponsiveBreakpoint.resize(1000, name: DESKTOP),
           ],
           background: Container(color: const Color(0xFFF5F5F5))),
-      routes: {
-        LandingScreen.routName:(context) =>  LandingScreen(),
-        FormScreen.routeName:(context) => const FormScreen(),
-        ResultScreen.routeName: (context) => const ResultScreen(),
-        ChooseLayoutScreen.routeName: (context) => const ChooseLayoutScreen()
-      },
-      initialRoute: LandingScreen.routName,
-      // home: const ResultScreenTest(),
+      // routes: {
+      //   LandingScreen.routName: (context) => LandingScreen(),
+      //   FormScreen.routeName: (context) => const FormScreen(),
+      //   ResultScreen.routeName: (context) => const ResultScreen(),
+      //   ChooseLayoutScreen.routeName: (context) => const ChooseLayoutScreen()
+      // },
+      // initialRoute: LandingScreen.routName,
+      home: const ResultScreenTest(),
       theme: ThemeData(
           // This is the theme of your application.
           //

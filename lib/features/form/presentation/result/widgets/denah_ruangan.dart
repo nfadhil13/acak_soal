@@ -43,7 +43,45 @@ class _NodeData {
   get dy => localOffset.dy;
 }
 
-class _DenahRuangan extends StatefulWidget {
+class _DenahRuangan extends StatelessWidget {
+  final LayoutRuangan layoutRuangan;
+  final DataRuangan dataRuangan;
+  final List<DataKetetanggaan> dataKetanggan;
+  final int jumlahPeserta;
+  final bool isScreenShoot;
+  const _DenahRuangan(
+      {Key? key,
+      required this.layoutRuangan,
+      required this.dataRuangan,
+      required this.dataKetanggan,
+      required this.jumlahPeserta,
+      this.isScreenShoot = false})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    if (isScreenShoot) {
+      return SingleChildScrollView(
+        child: _DenahRuanganContent(
+            layoutRuangan: layoutRuangan,
+            dataRuangan: dataRuangan,
+            dataKetanggan: dataKetanggan,
+            jumlahPeserta: jumlahPeserta,
+            width: 1000),
+      );
+    }
+    return LayoutBuilder(builder: ((context, constraints) {
+      return _DenahRuanganContent(
+          layoutRuangan: layoutRuangan,
+          dataRuangan: dataRuangan,
+          dataKetanggan: dataKetanggan,
+          jumlahPeserta: jumlahPeserta,
+          width: constraints.maxWidth);
+    }));
+  }
+}
+
+class _DenahRuanganContent extends StatefulWidget {
   static const colors = [
     Colors.red,
     Colors.blue,
@@ -60,19 +98,21 @@ class _DenahRuangan extends StatefulWidget {
   final DataRuangan dataRuangan;
   final List<DataKetetanggaan> dataKetanggan;
   final int jumlahPeserta;
-  const _DenahRuangan(
+  final double width;
+  const _DenahRuanganContent(
       {Key? key,
       required this.layoutRuangan,
       required this.dataRuangan,
       required this.dataKetanggan,
-      required this.jumlahPeserta})
+      required this.jumlahPeserta,
+      required this.width})
       : super(key: key);
 
   @override
-  State<_DenahRuangan> createState() => _DenahRuanganState();
+  State<_DenahRuanganContent> createState() => _DenahRuanganState();
 }
 
-class _DenahRuanganState extends State<_DenahRuangan> {
+class _DenahRuanganState extends State<_DenahRuanganContent> {
   final childList = <GlobalKey>[];
   late GlobalKey _stackKey;
   final _toggle = [false, false, false];
@@ -119,192 +159,187 @@ class _DenahRuanganState extends State<_DenahRuangan> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: ((context, constraints) {
-      final pixelWidth = constraints.maxWidth * 0.8;
-      final cmToPixelRatio = pixelWidth / widget.dataRuangan.panjangHorizontal;
-      final pixelHeight = cmToPixelRatio * widget.dataRuangan.panjangVertical;
-      final mejaHeight = cmToPixelRatio * widget.dataRuangan.dataMeja.lebar;
-      final mejaWidth = cmToPixelRatio * widget.dataRuangan.dataMeja.panjang;
-      final jarakBaris = cmToPixelRatio * widget.layoutRuangan.jarakAntarBaris;
-      final jarakKolom = cmToPixelRatio * widget.layoutRuangan.jarakAntarKolom;
-      final papanTulis = pixelHeight * 0.03;
-      const papanTulisToMejaSpacing = 100.0;
-      return Column(
-        children: [
-          ToggleButtons(
-            onPressed: (int index) {
-              setState(() {
-                _toggle[index] = !_toggle[index];
-              });
-            },
-            isSelected: _toggle,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: const [
-                    Icon(Icons.people),
-                    Text("Tampilkan Graf Ketetanggan")
+    final pixelWidth = widget.width * 0.8;
+    final cmToPixelRatio = pixelWidth / widget.dataRuangan.panjangHorizontal;
+    final pixelHeight = cmToPixelRatio * widget.dataRuangan.panjangVertical;
+    final mejaHeight = cmToPixelRatio * widget.dataRuangan.dataMeja.lebar;
+    final mejaWidth = cmToPixelRatio * widget.dataRuangan.dataMeja.panjang;
+    final jarakBaris = cmToPixelRatio * widget.layoutRuangan.jarakAntarBaris;
+    final jarakKolom = cmToPixelRatio * widget.layoutRuangan.jarakAntarKolom;
+    final papanTulis = pixelHeight * 0.03;
+    const papanTulisToMejaSpacing = 100.0;
+    return Column(
+      children: [
+        // ToggleButtons(
+        //   onPressed: (int index) {
+        //     setState(() {
+        //       _toggle[index] = !_toggle[index];
+        //     });
+        //   },
+        //   isSelected: _toggle,
+        //   children: <Widget>[
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: Column(
+        //         children: const [
+        //           Icon(Icons.people),
+        //           Text("Tampilkan Graf Ketetanggan")
+        //         ],
+        //       ),
+        //     ),
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: Column(
+        //         children: const [
+        //           Icon(Icons.data_array),
+        //           Text("Tampilkan Data Layout Ruagan")
+        //         ],
+        //       ),
+        //     ),
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: Column(
+        //         children: const [
+        //           Icon(Icons.table_bar),
+        //           Text("Tampilkan Meja Kosong")
+        //         ],
+        //       ),
+        //     ),
+        //   ],
+        // ),
+        if (_toggle[1]) const SizedBox(height: 20),
+        if (_toggle[1])
+          SizedBox(
+            width: pixelWidth + 20 + 14,
+            child: Column(
+              children: [
+                Text(
+                  "Panjang Horizontal Ruangan : ${widget.dataRuangan.panjangHorizontal / 100} Meter ",
+                  style: const TextStyle(fontSize: 16),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    const SizedBox(width: 34),
+                    Container(height: 14, width: 5, color: Colors.black),
+                    Expanded(
+                        child: Container(
+                      height: 4,
+                      width: double.infinity,
+                      color: Colors.black,
+                    )),
+                    Container(height: 14, width: 5, color: Colors.black),
                   ],
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: const [
-                    Icon(Icons.data_array),
-                    Text("Tampilkan Data Layout Ruagan")
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: const [
-                    Icon(Icons.table_bar),
-                    Text("Tampilkan Meja Kosong")
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
-          if (_toggle[1]) const SizedBox(height: 20),
-          if (_toggle[1])
-            SizedBox(
-              width: pixelWidth + 20 + 14,
-              child: Column(
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (_toggle[1])
+              SizedBox(
+                height: pixelHeight + papanTulis + papanTulisToMejaSpacing,
+                child: Column(
+                  children: [
+                    Container(height: 5, width: 14, color: Colors.black),
+                    Expanded(
+                        child: Container(
+                      width: 4,
+                      height: double.infinity,
+                      color: Colors.black,
+                    )),
+                    Container(height: 5, width: 14, color: Colors.black),
+                  ],
+                ),
+              ),
+            const SizedBox(width: 20),
+            Container(
+              width: pixelWidth,
+              height: pixelHeight + papanTulis + papanTulisToMejaSpacing,
+              color: const Color(0xffD9D9D9),
+              child: Stack(
+                key: _stackKey,
                 children: [
-                  Text(
-                    "Panjang Horizontal Ruangan : ${widget.dataRuangan.panjangHorizontal / 100} Meter ",
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      const SizedBox(width: 34),
-                      Container(height: 14, width: 5, color: Colors.black),
-                      Expanded(
-                          child: Container(
-                        height: 4,
-                        width: double.infinity,
-                        color: Colors.black,
-                      )),
-                      Container(height: 14, width: 5, color: Colors.black),
-                    ],
+                  if (_toggle[0]) ...drawLines(),
+                  Positioned.fill(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: papanTulis,
+                          width: pixelWidth * 0.5,
+                          padding: const EdgeInsets.all(10),
+                          color: Colors.black,
+                          child: const FittedBox(
+                              child: Text(
+                            "Papan Tulis",
+                            style: TextStyle(color: Colors.white),
+                          )),
+                        ),
+                        const SizedBox(
+                          height: papanTulisToMejaSpacing,
+                        ),
+                        Expanded(
+                          child: Wrap(
+                              runSpacing: jarakBaris,
+                              spacing: jarakKolom,
+                              alignment: WrapAlignment.center,
+                              crossAxisAlignment: WrapCrossAlignment.center,
+                              children: widget.dataKetanggan.mapIndexed((i, e) {
+                                final isMejaKosong = i >= widget.jumlahPeserta;
+                                final kolom =
+                                    widget.layoutRuangan.jumlahMejaKolom;
+                                final indexPlusOne = i + 1;
+                                final barisMeja = (indexPlusOne ~/ kolom +
+                                    (indexPlusOne % kolom > 0 ? 1 : 0));
+                                final indexAwalBaris = (barisMeja - 1) * kolom;
+                                final isAwalBarisDrawn =
+                                    indexAwalBaris < widget.jumlahPeserta;
+                                final shouldDraw = !isMejaKosong ||
+                                    isAwalBarisDrawn ||
+                                    _toggle[2];
+                                if (!shouldDraw) return const SizedBox();
+                                return Container(
+                                  key: childList[i],
+                                  width: mejaHeight,
+                                  height: mejaWidth,
+                                  padding: const EdgeInsets.all(10),
+                                  color: () {
+                                    if (!isMejaKosong) {
+                                      return _DenahRuanganContent
+                                          .colors[e.nomorPaket];
+                                    }
+                                    if (isMejaKosong && _toggle[2]) {
+                                      return _DenahRuanganContent.unusedChair;
+                                    }
+                                    return null;
+                                  }(),
+                                  child: () {
+                                    if (isMejaKosong && !_toggle[2]) {
+                                      return const SizedBox();
+                                    }
+                                    return FittedBox(
+                                        child: Text(
+                                            i >= widget.jumlahPeserta
+                                                ? "Kosong"
+                                                : "paket ${e.nomorPaket + 1}",
+                                            style: const TextStyle(
+                                                color: Colors.white)));
+                                  }(),
+                                );
+                              }).toList()),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (_toggle[1])
-                SizedBox(
-                  height: pixelHeight + papanTulis + papanTulisToMejaSpacing,
-                  child: Column(
-                    children: [
-                      Container(height: 5, width: 14, color: Colors.black),
-                      Expanded(
-                          child: Container(
-                        width: 4,
-                        height: double.infinity,
-                        color: Colors.black,
-                      )),
-                      Container(height: 5, width: 14, color: Colors.black),
-                    ],
-                  ),
-                ),
-              const SizedBox(width: 20),
-              Container(
-                width: pixelWidth,
-                height: pixelHeight + papanTulis + papanTulisToMejaSpacing,
-                color: const Color(0xffD9D9D9),
-                child: Stack(
-                  key: _stackKey,
-                  children: [
-                    if (_toggle[0] ) ...drawLines(),
-                    Positioned.fill(
-                      child: Column(
-                        children: [
-                          Container(
-                            height: papanTulis,
-                            width: pixelWidth * 0.5,
-                            padding: const EdgeInsets.all(10),
-                            color: Colors.black,
-                            child: const FittedBox(
-                                child: Text(
-                              "Papan Tulis",
-                              style: TextStyle(color: Colors.white),
-                            )),
-                          ),
-                          const SizedBox(
-                            height: papanTulisToMejaSpacing,
-                          ),
-                          Expanded(
-                            child: Wrap(
-                                runSpacing: jarakBaris,
-                                spacing: jarakKolom,
-                                alignment: WrapAlignment.center,
-                                crossAxisAlignment: WrapCrossAlignment.center,
-                                children:
-                                    widget.dataKetanggan.mapIndexed((i, e) {
-                                  final isMejaKosong =
-                                      i >= widget.jumlahPeserta;
-                                  final kolom =
-                                      widget.layoutRuangan.jumlahMejaKolom;
-                                  final indexPlusOne = i + 1;
-                                  final barisMeja = (indexPlusOne ~/ kolom +
-                                      (indexPlusOne % kolom > 0 ? 1 : 0));
-                                  final indexAwalBaris =
-                                      (barisMeja - 1) * kolom;
-                                  final isAwalBarisDrawn =
-                                      indexAwalBaris < widget.jumlahPeserta;
-                                  final shouldDraw = !isMejaKosong ||
-                                      isAwalBarisDrawn ||
-                                      _toggle[2];
-                                  if (!shouldDraw) return const SizedBox();
-                                  return Container(
-                                    key: childList[i],
-                                    width: mejaHeight,
-                                    height: mejaWidth,
-                                    padding: const EdgeInsets.all(10),
-                                    color: () {
-                                      if (!isMejaKosong) {
-                                        return _DenahRuangan
-                                            .colors[e.nomorPaket];
-                                      }
-                                      if (isMejaKosong && _toggle[2]) {
-                                        return _DenahRuangan.unusedChair;
-                                      }
-                                      return null;
-                                    }(),
-                                    child: () {
-                                      if (isMejaKosong && !_toggle[2]) {
-                                        return const SizedBox();
-                                      }
-                                      return FittedBox(
-                                          child: Text(
-                                              i >= widget.jumlahPeserta
-                                                  ? "Kosong"
-                                                  : "paket ${e.nomorPaket + 1}",
-                                              style: const TextStyle(
-                                                  color: Colors.white)));
-                                    }(),
-                                  );
-                                }).toList()),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ],
-      );
-    }));
+          ],
+        ),
+      ],
+    );
   }
 }
 

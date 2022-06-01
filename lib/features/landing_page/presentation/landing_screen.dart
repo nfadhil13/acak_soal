@@ -1,18 +1,14 @@
 import 'package:acak_soal/core/base_widgets/buttons/outlined_button.dart';
 import 'package:acak_soal/core/base_widgets/buttons/primary_button.dart';
-import 'package:acak_soal/core/base_widgets/progress_indicator/line_progress_indicator.dart';
 import 'package:acak_soal/core/ext/ctx_ext.dart';
 import 'package:acak_soal/core/style/color.dart';
-import 'package:acak_soal/core/ext/text_style.dart';
 import 'package:acak_soal/features/form/presentation/form/form_screen.dart';
 import 'package:acak_soal/features/generate_template/presentation/generate_template.dart';
-import 'package:dio/dio.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-
-import '../../../core/service_locator/injection_container.dart';
 
 class LandingScreen extends StatelessWidget {
   static const routName = "/";
@@ -66,8 +62,8 @@ class LandingScreen extends StatelessWidget {
                       },
                     ),
                   );
-                  final dio = getIt<Dio>();
-                  
+                  final storage = FirebaseStorage.instance.ref("pdfs/try.pdf");
+                  final ref = await storage.putData(await pdf.save());
                 },
               ),
               const SizedBox(height: 15),

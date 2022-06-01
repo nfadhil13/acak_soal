@@ -37,7 +37,7 @@ void _injectRepository() {
 
 void _injectDataSource() {
   getIt.registerFactory<PengacakanNetworkDataSource>(
-      () => PengacakanNetworkDataSourceImpl(getIt()));
+      () => PengacakanNetworkDataSourceTestImpl());
   getIt.registerFactory<GenereateTemplateNetworkDatasource>(
       () => GenerateTemplateNetworkDatasourceImpl(getIt()));
 }
